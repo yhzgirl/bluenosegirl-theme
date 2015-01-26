@@ -1,7 +1,7 @@
     {{! Navigation for Small Screen }}
 
     <div class="back-to-home">
-        <a href="{{@blog.url}}"><i class="fa fa-long-arrow-left fa-2x"></i><h5>{{@blog.title}}</h5></a>       
+        <a href="{{@blog.url}}"><i class="fa fa-long-arrow-left fa-2x"></i><h5>{{@blog.title}}</h5></a>
     </div> <!-- Small Screen Navigation End -->
 
     <div class='post-fixed-nav'>
@@ -10,8 +10,7 @@
         <hr>
 
     <div class="post-sidebar">
-         <h2 class="sidebar-title"><i class="fa fa-tags fa-fw"></i>Another Sidebar</h2>
-         <p>And some another contents. Replace it from page-sidebar.hbs file. <br> See Documentation for details.</p>
+       <h2 class="sidebar-title">Posts for "{{tag.name}}"</h2>
     </div>
 
 <!-- Add another sidebar below //
@@ -22,10 +21,10 @@
          <p>And some another contents. Replace it from page-sidebar.hbs file.</p>
     </div>
 
-// --> 
+// -->
 
 
-<!-- Footer Social Icons --> 
+<!-- Footer Social Icons -->
     {{! The tag below includes footer social menu - partials/footer-social.hbs }}
     {{> "footer-social"}}
 <!-- Footer Social Icons -->

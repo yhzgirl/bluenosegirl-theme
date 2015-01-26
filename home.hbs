@@ -4,7 +4,7 @@
     the {body} of the default.hbs template, which contains our header/footer. }}
 
  {{! Top Toggle Menu}}
-    <div class="top-toggle-menu">
+    <div class="top-toggle-menu open">
         <div id="menu-toggle">
               <div class="one"></div>
               <div class="two"></div>
@@ -15,13 +15,13 @@
               <ul>
                 <li><a href="/about"><span><i class="fa fa-info-circle"></i></span> About</a></li>
                 <li><a href="/features"><span><i class="fa fa-gear"></i></span> Features</a></li>
-                <li><a href="/contact"><span><i class="fa fa-envelope"></i></span> Contact</a></li>                
+                <li><a href="/contact"><span><i class="fa fa-envelope"></i></span> Contact</a></li>
               </ul>
-        </div> 
+        </div>
     </div>
 
 {{! The big featured header on the homepage, with the site logo and description }}
-<header id="site-head" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}> 
+<header id="site-head" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
         <div id="top" class="vertical">
         <div id="site-head-content" class="inner">
             {{#if @blog.logo}}<a id="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
@@ -32,7 +32,7 @@
         {{! Social Icons}}
 	    <div class="blog-description social-icons">
             <a href="http://www.facebook.com/livingabroad" target="_blank"><img src="/assets/images/facebook.png"></a>
-            <a href="http://www.twitter.com/yhzgirl" target="_blank"><img src="/assets/images/twitter.png"></a>            
+            <a href="http://www.twitter.com/yhzgirl" target="_blank"><img src="/assets/images/twitter.png"></a>
 <!--            <a href="https://plus.google.com" target="_blank"><img src="/assets/images/google-plus.png"></a>	-->
             <a href="http://www.pinterest.com/yhzgirl/bluenose-girl/" target="_blank"><img src="/assets/images/pinterest.png"></a>
 <!--            <a href="https://behance.com/" target="_blank"><img src="/assets/images/behance.png"></a>-->
@@ -42,7 +42,7 @@
         </div> <!-- Social Icons End -->
 
             <a class='btn first'>Explore the Blog <span><i class="fa fa-caret-down"></i></span></a>
-            
+
         </div>
     </div>
 
@@ -56,7 +56,7 @@
 <hr>
 <h4>Latest Posts</h4>
 
-<!-- Footer Social Icons --> 
+<!-- Footer Social Icons -->
     {{! The tag below includes footer social menu - partials/footer-social.hbs }}
     {{> "footer-social"}}
 <!-- Footer Social Icons -->
