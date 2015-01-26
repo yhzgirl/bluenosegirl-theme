@@ -1,0 +1,85 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+{{! The main content area on the homepage }}
+<main class="content" role="main">
+
+    <!-- Post Sidebar -->
+        {{! The tag below includes the post sidebar - partials/post-sidebar.hbs }}
+
+        {{> "post-sidebar"}}
+
+
+    <!-- Post Content -->
+
+    {{! Each post will be output using this markup }}
+
+    <div class='post-holder'>    
+            
+        {{! Everything inside the #post tags pulls data from the post }}
+
+        <article class="{{post_class}}">  
+        {{#post}}
+              
+         <header>                
+                <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+                <div class="post-meta"><span class="author"><i class="fa fa fa-user fa-fw"></i> {{author}} </span> <span class="post-time"><i class="fa fa fa-calendar fa-fw"></i> <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM DD, YYYY"}} </time> </span> {{#if tags}} <span class="post-tags "> <i class="fa fa-tags fa-fw"></i> {{tags separator=" | "}} {{/if}}</span> </div>
+         </header>
+
+            <section class="post-content">
+                {{content}}
+            </section>
+
+
+            <footer class="post-footer">
+
+                <section class="author">
+                    <img class="author-avatar" src="{{author.image}}">
+                    <h4>{{author.name}}</h4>
+                    <p>{{author.bio}}</p>
+                </section>
+
+                <section class="share">
+                    <h4>Share this post</h4>
+                    <a href="http://twitter.com/share?text={{encode title}}&url={{url absolute="true"}}"
+                        onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                        <span><i class="fa fa-twitter"></i></span>                        
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+                        onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                        <span><i class="fa fa-facebook"></i></span>
+                    </a>
+                    <a href="https://plus.google.com/share?url={{url absolute="true"}}"
+                       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                       <span><i class="fa fa-google-plus"></i></span>
+                    </a>
+                </section>
+
+                <hr>
+
+        {{! Discuss Comment Integration}}
+            <section class="post-comment">
+                <div id="disqus_thread"></div>
+                <script type="text/javascript">
+                    var disqus_shortname = 'example'; // required: replace example with your forum shortname
+                    var disqus_identifier = '{{post.id}}'; // make sure to use the post.id as an identifier, otherwise disqus will use the pages url per default, which might be problematic...
+
+                    /* * * DON'T EDIT BELOW THIS LINE * * */
+                    (function() {
+                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                <a href="http://disqus.com" class="dsq-brlink">Leave a Reply <span class="logo-disqus"></span></a>
+            </section> <!-- Discuss Comment End -->
+
+            </footer>
+            {{/post}}
+    
+        </article>        
+    </div>
+</main>

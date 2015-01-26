@@ -1,0 +1,27 @@
+<div class='post-fixed-nav'>
+    	{{#if @blog.logo}}<a class="blog-logo-left" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Logo" /></a>{{/if}}
+        <h5 class="left-menu-title">{{@blog.title}}</h5>
+        <hr>
+
+    <div class="post-sidebar">
+         <h2 class="sidebar-title"><i class="fa fa-tags fa-fw"></i>Another Sidebar</h2>
+         <p>And some another contents. Replace it from post-sidebar.hbs file. <br> See Documentation for details.</p>
+    </div>
+
+
+	<!-- Add another sidebar below //
+
+	    <div class="post-sidebar">
+	         <h2 class="sidebar-title"><i class="fa fa-tags fa-fw"></i>Another Sidebar</h2>
+	         <p>And some another contents. Replace it from page-sidebar.hbs file.</p>
+	    </div>
+
+	// --> 
+
+
+<!-- Footer Social Icons --> 
+    {{! The tag below includes footer social menu - partials/footer-social.hbs }}
+    {{> "footer-social"}}
+<!-- Footer Social Icons -->
+
+</div>

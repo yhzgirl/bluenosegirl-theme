@@ -1,0 +1,29 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+{{! The main content area on the homepage }}
+<main class="content" role="main">
+
+    <!-- Page Sidebar -->
+        {{! The tag below includes the page sidebar - partials/page-sidebar.hbs }}
+        
+        {{> "page-sidebar"}}
+
+
+    <!-- Page Content -->
+
+    {{!Tag Page Header }}
+
+    <div class='tag-header' {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
+        <div class="tag-container">
+            <h1 class="tag-title">Posts for <em> "{{tag.name}}" </em></h1>
+            <h3 class="tag-description">Total {{pagination.total}} Posts</h3> 
+        </div>
+    </div>
+
+    {{! The tag below includes the post loop - partials/loop.hbs }}
+    {{> "loop"}}
+
+</main>

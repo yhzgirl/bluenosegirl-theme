@@ -1,0 +1,37 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+{{! The main content area on the homepage }}
+<main class="content" role="main">
+
+    <!-- Page Sidebar -->
+        {{! The tag below includes the page sidebar - partials/page-sidebar.hbs }}
+
+        {{> "page-sidebar"}}
+
+
+    <!-- Page Content -->
+
+    {{! Each post will be output using this markup }}
+
+    <div class='post-holder'>    
+            
+        {{! Everything inside the #post tags pulls data from the post }}
+
+        <article class="{{post_class}}">  
+        {{#post}}
+              
+            <h1 class="page-title">{{{title}}}</h1>
+            
+            <section class="post-content">
+                {{content}}
+            </section>
+
+            {{/post}}
+    
+        </article>   
+
+    </div>
+</main>
