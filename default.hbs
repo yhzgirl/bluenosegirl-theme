@@ -1,10 +1,10 @@
-<!-- 
-/******************************************/   
+<!--
+/******************************************/
 /*    Theme   : Phantom                   */
 /*    Version : 1.2                       */
 /*    Author  : Codetic                   */
-/*    Website : http://www.codetic.net    */ 
-/******************************************/  
+/*    Website : http://www.codetic.net    */
+/******************************************/
  -->
 
 <!DOCTYPE html>
@@ -26,7 +26,7 @@
     <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
 
     {{! Styles'n'Scripts }}
-    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
 
@@ -47,9 +47,9 @@
         <a class="go-top" href="#top" title="Back to Top">
             <span><i class="fa fa-arrow-circle-up fa-4x"></i></span>
         </a>
-        
+
         <div class="inner">
-            <section class="poweredby"><a href="{{@blog.url}}">{{@blog.title}}</a>  &copy; All Rights Reserved, 2015 
+            <section class="poweredby"><a href="{{@blog.url}}">{{@blog.title}}</a>  &copy; All Rights Reserved, 2015
             </section>
         </div>
     </footer>
@@ -59,9 +59,9 @@
 
 
     {{! The main JavaScript file for Phantom }}
-    <script type="text/javascript" src="/assets/js/icons.js"></script>
-    <script type="text/javascript" src="/assets/js/index.js"></script>
-    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="{{asset "js/icons.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
 
 
 </body>
