@@ -14,7 +14,6 @@
         <div id="top-menu">
               <ul>
                 <li><a href="/about"><span><i class="fa fa-info-circle"></i></span> About</a></li>
-                <li><a href="/features"><span><i class="fa fa-gear"></i></span> Features</a></li>
                 <li><a href="/contact"><span><i class="fa fa-envelope"></i></span> Contact</a></li>                
               </ul>
         </div> 
@@ -54,7 +53,7 @@
     <div class='fixed-nav'>
         {{#if @blog.logo}}<a class="blog-logo-left" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Logo" /></a>{{/if}}
 <hr>
-<h3>Latest Posts</h3>
+<h3 class=post-sidebar-header>Latest Posts</h3>
 
 <!-- Footer Social Icons --> 
     {{! The tag below includes footer social menu - partials/footer-social.hbs }}
